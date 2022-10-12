@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, '../public')))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'weather App',
-        name: 'bob'
+        name: 'boob'
     })
 })
 
