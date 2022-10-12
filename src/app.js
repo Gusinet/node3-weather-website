@@ -9,6 +9,8 @@ const __dirname = path.dirname(__filename);
 
 const app = express()
 
+const port = process.env.PORT || 3000
+
 app.set('view engine','hbs')
 app.use(express.static(path.join(__dirname, '../public')))
 
@@ -44,6 +46,6 @@ app.get('/weather', (req,res) => {
 
 
 
-app.listen(3000, () => {
-    console.log('server is up on 3000')
+app.listen(port, () => {
+    console.log('server is up on ' + port)
 })
