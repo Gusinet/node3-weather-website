@@ -22,7 +22,7 @@ app.get('', (req, res) => {
 app.get('/weather', (req,res) => {
     if(!req.query.address){
         return res.send({
-            error: 'pls send an address my boy'
+            error: 'pls send an address'
         })
     }
     geocode(req.query.address, (error, { latitude, longitude, location }) => {
